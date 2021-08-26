@@ -1,8 +1,8 @@
-import React from 'react'
+import React from 'react';
 
 const NewTopic = (props) => {
     //{subYo:{id, name}, x:1, t:'this is t'}
-    const { subYo } = props;
+    const { sub } = props;
     return (
         <div>
             <h1>New Topic</h1>

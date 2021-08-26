@@ -5,9 +5,12 @@ Rails.application.routes.draw do
   root "subs#index"
   
   resources :subs do
-    :topics
+   resources :topics
   end
 
+  resources :topics do
+    resources :comments
+  end
   #resources :subs      this will make everything below automatically, this is a shortcut
   # get '/subs', to:'subs#index' #all subs
   # get '/subs/:id', to:'subs#show' # one subs

@@ -30,7 +30,8 @@ class TopicsController < ApplicationController
 
     def show
         @topic = @sub.topic.find(params[:id])
-        render json: @topic
+        #render json: @topic
+        render component: "Topic", props:{topic:@topic, comments:@topic.comments}
         #@topic = @sub.topics.find(params[:id])
         #@topic = Topic.find(params[:id])
     end
@@ -39,7 +40,7 @@ class TopicsController < ApplicationController
         @topic.destroy
         redirect_to sub_topics_path(@sub.id)
     end
-    
+
     private
 
     def topic_params
