@@ -13,3 +13,8 @@
  *= require_tree .
  *= require_self
  */
+ /* element.style */
+ a {
+     color: greenyellow;
+    margin-right: 20px;
+ }
